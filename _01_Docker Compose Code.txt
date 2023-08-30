@@ -1,4 +1,6 @@
 
+### docker-compose version
+docker-compose --version
 
 ### ayaktaki compose yapıları görmek
 docker-compose ps 
