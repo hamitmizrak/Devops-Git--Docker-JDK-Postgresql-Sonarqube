@@ -5,24 +5,22 @@
 version: '2.13.0' 
 
 services:
-# spring boot image
  blogapp:
   container_name: spring_react_blog
   image: spring_react_blog
   restart: always
-  build: ./ # Dockerfile içindekileri çalıştır =>  docker build .
+  build: ./
   ports:
    - "4444:4444"
   environment:
-   - spring.datasource.url=jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+   - spring.datasource.url=jdbc:mysql://mysqldb:3306/blog?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
   networks:
    - springmysql
   depends_on:
-   -mysqldb
+   - mysqldb
 
-# Mysql image
  mysqldb:
-  image: mysql:8.0  #mysql:latest
+  image: mysql:8.0  
   ports:
    - 3307:3306
   expose:
@@ -30,14 +28,13 @@ services:
   networks:
    - springmysql
   environment:
-   -MYSQL_ROOT_PASSWORD= root
-   -MYSQL_DATABASE=blog
-   -MYSQL_USER=root
-   -MYSQL_PASSWORD=root
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_DATABASE=blog
+   - MYSQL_USER=hamit
+   - MYSQL_PASSWORD=root
   restart: unless-stopped
 
- # Network NOT: services aynı hizada olmalı
 networks:
   springmysql:
-  name: springmysql
-  driver: bridge
+   name: springmysql
+   driver: bridge
