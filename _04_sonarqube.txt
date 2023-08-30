@@ -1,0 +1,19 @@
+Sonarqube: statik kod analizi yapmak için kullanıyoruz.
+- SonarCloud: statik kod analizini ve test coverage'ını göstermek için kullanıyoruz.
+JDK -11
+Postgresql 
+SonarQube server
+SonarQube Scanner 
+
+########################################
+$ sudo vi /etc/sysctl.conf 
+$ vm.max_map_count=262144
+$ fs.file-max=65536
+$ sudo sysctl -p 
+
+$ sudo apt-get install docker -y 
+$ sudo apt-get install docker-compose -y
+$ sudo usermod -aG docker $USER
+
+$ sudo apt-get update && sudo apt-get upgrade -y 
+
