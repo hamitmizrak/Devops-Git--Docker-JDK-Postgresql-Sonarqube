@@ -36,8 +36,8 @@ services:
    -MYSQL_PASSWORD=root
   restart: unless-stopped
 
- # Network
- networks:
+ # Network NOT: services aynı hizada olmalı
+networks:
   springmysql:
   name: springmysql
   driver: bridge
