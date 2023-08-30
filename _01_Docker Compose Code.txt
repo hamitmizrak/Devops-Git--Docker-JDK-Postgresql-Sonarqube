@@ -1,0 +1,35 @@
+
+
+### ayaktaki compose yapıları görmek
+docker-compose ps 
+
+### Docker compose ayağa kaldır
+docker-compose up 
+docker-compose up -d (detach: anlık loglamayı gösterme)
+
+### compose kapatmak
+docker-compose down 
+docker-compose down -v (compose kapat ve volume sil)
+
+### compose terminal
+docker-compose exec
+docker-compose start 
+docker-compose logs 
+docker-compose config
+docker-compose images
+
+### compose bir şeyler değiştirdik ve bunu güncelleme yapmak istiyoruz
+docker-compose build 
+
+### compose'dan birden fazla varsa ne yapacağız.
+docker-compose -f  springboot-react-docker-compose.yml up 
+--- Örnek ---
+docker-compose.yml
+springboot-react-compose.yml
+sonarqube-compose.yml
+nginx-compose-project.yml
+
+### compose'dan birden fazla servis başlat örneğin 2 tane nginx başlat
+nginx-compose-project.yml
+docker-compose up --scale nginx-compose-project.yml=2 
+docker-compose up --scale nginx-compose-project.yml=2 -d
