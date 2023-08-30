@@ -7,8 +7,8 @@ SonarQube Scanner
 
 ########################################
 $ sudo vi /etc/sysctl.conf 
-$ vm.max_map_count=262144
-$ fs.file-max=65536
+vm.max_map_count=262144
+fs.file-max=65536
 $ sudo sysctl -p 
 
 $ sudo apt-get install docker -y 
