@@ -2,7 +2,7 @@
 # docker-compose: birden fazla  config, image dosyalarını çalıştırmak için kullanıyoruz.
 
 # docker-compose version
-version: '2.13.0' 
+version: "3"
 
 services:
  blogapp:
