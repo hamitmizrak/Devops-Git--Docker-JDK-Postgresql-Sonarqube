@@ -1,0 +1,14 @@
+localhost:2222  => portainer
+localhost:4444  => Java 
+localhost:7777  => jenkins
+localhost:9000  => SonarQube
+
+localhost:3306  => mysql 
+localhost:5432  => postgresql
+localhost:80    => nginx 
+
+
+-----------------------------------------
+JDK   :
+maven :
+git   :

@@ -1,1 +1,15 @@
-docker search mysql
+docker search nginx
+docker pull nginx:latest 
+docker container run -d --rm -p 8080:8080 nginx
+docker container start containerID 
+docker container stop containerID 
+
+
+
+
+docker-compose -f docker-compose-spring-react-docker-compose.yml up
+docker-compose -f docker-compose-sonar-scanner-postgresql.yml up
+docker-compose -f docker-compose-jenkins.yml up
+
+
+

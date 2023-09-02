@@ -6,6 +6,11 @@ SonarQube server
 SonarQube Scanner 
 
 ########################################
+username: admin 
+password: admin
+
+
+########################################
 $ sudo vi /etc/sysctl.conf
 # SonarQube 
 vm.max_map_count=262144
